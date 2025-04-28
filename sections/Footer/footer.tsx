@@ -10,24 +10,24 @@ export const Footer = (): JSX.Element => {
       </p>
       <div className="flex gap-4">
         <Link
-          href=""
+          href="https://github.com/alexappleget"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub Profile"
         >
           <GithubIcon
-            className="text-[#94a3b8] hover:text-[#22d3ee] transition-colors hover:cursor-pointer"
+            className="text-[#94a3b8] hover:text-[#6366f1] transition-colors hover:cursor-pointer"
             aria-hidden="true"
           />
         </Link>
         <Link
-          href=""
+          href="https://www.linkedin.com/in/alex-appleget/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn Profile"
         >
           <LinkedinIcon
-            className="text-[#94a3b8] hover:text-[#22d3ee] transition-colors hover:cursor-pointer"
+            className="text-[#94a3b8] hover:text-[#6366f1] transition-colors hover:cursor-pointer"
             aria-hidden="true"
           />
         </Link>
