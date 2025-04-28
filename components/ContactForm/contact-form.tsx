@@ -11,6 +11,7 @@ import {
 } from "@/components/Select/select";
 import { Textarea } from "@/components/TextArea/textarea";
 import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 export const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,6 +24,8 @@ export const ContactForm = () => {
 
     setIsSubmitting(false);
     (e.target as HTMLFormElement).reset();
+
+    toast.success("Your message has been sent successfilly!");
   };
 
   return (
@@ -107,11 +110,13 @@ export const ContactForm = () => {
 
       <button
         type="submit"
-        className="w-full flex items-center px-4 py-2 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition hover:shadow-md"
+        className="w-full flex items-center justify-center px-4 py-2 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition hover:shadow-md"
         disabled={isSubmitting}
       >
         {isSubmitting ? "Sending..." : "Send Message"}
       </button>
+
+      <Toaster position="bottom-center" reverseOrder={false} />
     </form>
   );
 };
