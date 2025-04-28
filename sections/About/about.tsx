@@ -9,7 +9,7 @@ export const About = (): JSX.Element => {
         <div className="order-2 lg:order-1">
           <div className="relative w-full h-[300px] sm:h-[400px] rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/placeholder.svg?height=400&width=600"
+              src="/sunglasses.jpg?height=400&width=600"
               alt="Alex working"
               fill
               className="object-cover"
