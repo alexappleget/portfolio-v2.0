@@ -14,18 +14,63 @@ import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 export const ContactForm = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    projectType: "",
+    message: "",
+  });
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({
+      ...form,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSelectChange = (value: string) => {
+    setForm({
+      ...form,
+      projectType: value,
+    });
+  };
+
+  const resetForm = () => {
+    setForm({
+      name: "",
+      email: "",
+      projectType: "",
+      message: "",
+    });
+  };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+      const result = await response.json();
 
-    toast.success("Your message has been sent successfilly!");
+      if (result) {
+        toast.success("Your message has been sent successfully!");
+      }
+
+      resetForm();
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("An error occured. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -40,7 +85,9 @@ export const ContactForm = () => {
             name="name"
             required
             placeholder="Your name"
-            className="bg-[#262b35] text-[#f1f5f9] border border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]"
+            className="bg-[#262b35] text-[#f1f5f9] border placeholder-[#94a3b8] border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]"
+            onChange={handleChange}
+            value={form.name}
           />
         </div>
         <div className="space-y-2">
@@ -53,7 +100,9 @@ export const ContactForm = () => {
             type="email"
             required
             placeholder="Your email"
-            className="bg-[#262b35] text-[#f1f5f9] border border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]"
+            className="bg-[#262b35] text-[#f1f5f9] border placeholder-[#94a3b8] border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]"
+            onChange={handleChange}
+            value={form.email}
           />
         </div>
       </div>
@@ -62,7 +111,12 @@ export const ContactForm = () => {
         <Label htmlFor="project-type" className="text-[#f1f5f9]">
           Project Type
         </Label>
-        <Select name="project-type" required>
+        <Select
+          name="project-type"
+          required
+          onValueChange={handleSelectChange}
+          value={form.projectType}
+        >
           <SelectTrigger className="bg-[#262b35] text-[#f1f5f9] border border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]">
             <SelectValue placeholder="Select project type" />
           </SelectTrigger>
@@ -105,6 +159,8 @@ export const ContactForm = () => {
           required
           placeholder="Tell me about your project or idea"
           className="bg-[#262b35] text-[#f1f5f9] border border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5] min-h-[120px]"
+          onChange={handleChange}
+          value={form.message}
         />
       </div>
 
