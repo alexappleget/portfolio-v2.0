@@ -24,7 +24,14 @@ export const Hero = (): JSX.Element => {
           </div>
           <TechStack />
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="flex items-center px-6 py-3 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition hover:cursor-pointer hover:shadow-lg">
+            <button
+              className="flex items-center px-6 py-3 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition hover:cursor-pointer hover:shadow-lg"
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               Let&apos;s Bring Your Ideas to Life
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>

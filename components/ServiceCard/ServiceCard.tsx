@@ -38,7 +38,14 @@ export const ServiceCard = ({
         <p className="text-[#94a3b8]">{description}</p>
       </CardContent>
       <CardFooter>
-        <button className="flex items-center px-4 py-2 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition hover:shadow-md">
+        <button
+          className="flex items-center px-4 py-2 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition hover:shadow-md"
+          onClick={() =>
+            document
+              .getElementById("contact")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+        >
           Let&apos;s Build Together
           <ArrowRight className="ml-2 h-4 w-4" />
         </button>

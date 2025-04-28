@@ -10,3 +10,7 @@
   --primary-hover: #6366f1;
   --accent: #22d3ee;
 }
+
+html {
+  scroll-behavior: smooth;
+}

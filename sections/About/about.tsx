@@ -38,7 +38,14 @@ export const About = (): JSX.Element => {
             bringing a client-centric approach to every project.
           </p>
           <div className="pt-4">
-            <button className="inline-block px-6 py-3 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition-colors">
+            <button
+              className="inline-block px-6 py-3 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition-colors"
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               Get in Touch
             </button>
           </div>
