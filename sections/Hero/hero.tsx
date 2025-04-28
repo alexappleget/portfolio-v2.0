@@ -1,11 +1,11 @@
-import { TechStack } from "@/components/TechStack";
+import { TechStack } from "@/components/TechStack/TechStack";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { JSX } from "react";
 
 export const Hero = (): JSX.Element => {
   return (
-    <section className="min-h-screen flex items-center bg-[#20242d] px-6 md:px-12 lg:px-24">
+    <section className="min-h-screen flex items-center">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div className="space-y-6">
@@ -13,11 +13,11 @@ export const Hero = (): JSX.Element => {
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl text-[#f1f5f9]">
               Hi, I&apos;m Alex, a Full-Stack Software Engineer
             </h1>
-            <p className="text-[#cbd5e1] text-lg sm:text-xl">
+            <p className="text-[#94a3b8] text-lg sm:text-xl">
               I build scalable SaaS platforms, custom websites, and web apps
               that solve real business problems.
             </p>
-            <p className="text-[#cbd5e1] text-lg sm:text-xl">
+            <p className="text-[#94a3b8] text-lg sm:text-xl">
               I focus on delivering fast, effective solutions that enhance user
               experiences and streamline business operations.
             </p>
@@ -33,7 +33,7 @@ export const Hero = (): JSX.Element => {
 
         {/* Image */}
         <div className="flex justify-center lg:justify-end">
-          <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-full border-4 border-[#334155] shadow-xl">
+          <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] overflow-hidden rounded-full border-4 border-[#334155] shadow-xl">
             <Image
               src="/headshot.jpg?height=400&width=400"
               alt="Alex Appleget"
