@@ -5,7 +5,7 @@ import { JSX } from "react";
 
 export const Hero = (): JSX.Element => {
   return (
-    <section className="min-h-screen flex items-center">
+    <section className="min-h-screen flex items-center justify-center lg:justify-start">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div className="space-y-6">
@@ -23,7 +23,7 @@ export const Hero = (): JSX.Element => {
             </p>
           </div>
           <TechStack />
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <button
               className="flex items-center px-6 py-3 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition hover:cursor-pointer hover:shadow-lg"
               onClick={() =>
@@ -39,7 +39,7 @@ export const Hero = (): JSX.Element => {
         </div>
 
         {/* Image */}
-        <div className="flex justify-center lg:justify-end">
+        <div className="hidden lg:flex justify-center lg:justify-end">
           <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] overflow-hidden rounded-full border-4 border-[#334155] shadow-xl">
             <Image
               src="/headshot.jpg?height=400&width=400"

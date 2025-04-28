@@ -6,7 +6,7 @@ export const About = (): JSX.Element => {
     <section id="about" className="py-12 md:py-24 ">
       <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
         {/* Image Section */}
-        <div className="order-2 lg:order-1">
+        <div className="order-2 lg:order-1 lg:row-auto row-start-1">
           <div className="relative w-full h-[300px] sm:h-[400px] rounded-lg overflow-hidden shadow-lg">
             <Image
               src="/sunglasses.jpg?height=400&width=600"
@@ -18,7 +18,7 @@ export const About = (): JSX.Element => {
         </div>
 
         {/* Text Section */}
-        <div className="space-y-4 order-1 lg:order-2">
+        <div className="space-y-4 order-1 lg:order-2 lg:row-auto row-start-2">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-[#f1f5f9]">
             About Me
           </h2>
