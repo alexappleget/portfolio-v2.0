@@ -1,67 +1,20 @@
-import { Input } from "@/components/Input/input";
-import { Label } from "@/components/Label/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/Select/select";
-import { Textarea } from "@/components/TextArea/textarea";
+import { ContactForm } from "@/components/ContactForm/contact-form";
 
 export const Contact = () => {
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid gap-4 sm:grid-cols-2">
-        <div className="space-y-2">
-          <Label htmlFor="name">Name</Label>
-          <Input id="name" name="name" required placeholder="Your name" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="email">Email</Label>
-          <Input
-            id="email"
-            name="email"
-            type="email"
-            required
-            placeholder="Your email"
-          />
-        </div>
+    <section id="contact" className="py-12 md:py-24">
+      <div className="flex flex-col items-center text-center mb-12">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-[#f1f5f9]">
+          Contact Me
+        </h2>
+        <p className="text-xl text-[#94a3b8] max-w-[600px]">
+          Not sure where to start? Feel free to reach out with your ideas or
+          questions. Let&apos;s create something amazing together!
+        </p>
       </div>
-
-      <div className="space-y-2">
-        <Label htmlFor="project-type">Project Type</Label>
-        <Select name="project-type" required>
-          <SelectTrigger>
-            <SelectValue placeholder="Select project type" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="saas">SaaS Development</SelectItem>
-            <SelectItem value="website">Custom Website</SelectItem>
-            <SelectItem value="optimization">Web App Optimization</SelectItem>
-            <SelectItem value="other">Other</SelectItem>
-          </SelectContent>
-        </Select>
+      <div className="max-w-[600px] mx-auto mb-12">
+        <ContactForm />
       </div>
-
-      <div className="space-y-2">
-        <Label htmlFor="message">Message</Label>
-        <Textarea
-          id="message"
-          name="message"
-          required
-          placeholder="Tell me about your project or idea"
-          className="min-h-[120px]"
-        />
-      </div>
-
-      <button
-        type="submit"
-        className="w-full flex items-center px-4 py-2 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition hover:shadow-md"
-        disabled={isSubmitting}
-      >
-        {isSubmitting ? "Sending..." : "Send Message"}
-      </button>
-    </form>
+    </section>
   );
 };
