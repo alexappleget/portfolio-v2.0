@@ -1,3 +1,14 @@
+import { Input } from "@/components/Input/input";
+import { Label } from "@/components/Label/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/Select/select";
+import { Textarea } from "@/components/TextArea/textarea";
+
 export const Contact = () => {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
