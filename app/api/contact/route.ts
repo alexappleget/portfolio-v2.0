@@ -6,18 +6,18 @@ export async function POST(req: Request) {
     const { name, email, projectType, message } = await req.json();
 
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
+      host: process.env.HOST as string,
       port: 465,
       secure: true,
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: process.env.EMAIL_USER as string,
+        pass: process.env.EMAIL_PASS as string,
       },
     });
 
     const mailOptions = {
-      from: `"Portfolio Contact" <${email}>`,
-      to: "alexapplegetdev@gmail.com",
+      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_USER as string,
       subject: `New Contract Form Submission: ${projectType}`,
       text: `You have a new contact form submission:\n\nName: ${name}\nEmail: ${email}\nProject Type: ${projectType}\nMessage: ${message}`,
     };
