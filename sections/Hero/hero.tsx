@@ -5,7 +5,7 @@ import { JSX } from "react";
 
 export const Hero = (): JSX.Element => {
   return (
-    <section className="min-h-screen flex items-center justify-center lg:justify-start">
+    <section className="min-h-screen flex items-center justify-center lg:justify-start pb-10">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div className="space-y-6">
