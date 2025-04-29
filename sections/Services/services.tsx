@@ -3,7 +3,7 @@ import { JSX } from "react";
 
 export const Services = (): JSX.Element => {
   return (
-    <section id="services" className="py-12 md:py-24">
+    <section id="services" className="py-6 md:py-24">
       <div className="mx-auto">
         <div className="flex flex-col items-center text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-[#f1f5f9]">
