@@ -1,10 +1,20 @@
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { JSX } from "react";
+import { JSX, useRef } from "react";
 
 export const About = (): JSX.Element => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <section id="about" className="py-12 md:py-24 ">
-      <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+      <motion.div
+        ref={ref}
+        className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center"
+        initial={{ opacity: 0, y: 100 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         {/* Image Section */}
         <div className="order-2 lg:order-1 lg:row-auto row-start-1">
           <div className="relative w-full h-[300px] sm:h-[400px] rounded-lg overflow-hidden shadow-lg">
@@ -50,7 +60,7 @@ export const About = (): JSX.Element => {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

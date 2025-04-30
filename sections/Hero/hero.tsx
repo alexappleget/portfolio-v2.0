@@ -2,22 +2,40 @@ import { TechStack } from "@/components/TechStack/TechStack";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { JSX } from "react";
+import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 export const Hero = (): JSX.Element => {
   return (
     <section className="min-h-screen flex items-center justify-center lg:justify-start pb-20 md:pb-0">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
-        <div className="space-y-6">
+        <motion.div
+          className="space-y-6"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl text-[#f1f5f9]">
-              Hi, I&apos;m Alex, a Full-Stack Software Engineer
+              Hi, I&apos;m Alex, a
             </h1>
-            <p className="text-[#94a3b8] text-lg sm:text-xl">
+            <span className="text-4xl font-bold text-[#6366f1] leading-relaxed">
+              <Typewriter
+                words={[
+                  "Software Engineer",
+                  "Problem Solver",
+                  "Tech Enthusiast",
+                ]}
+                loop
+                cursor
+              />
+            </span>
+            <p className="text-[#94a3b8] text-lg sm:text-xl leading-relaxed mt-2">
               I build scalable SaaS platforms, custom websites, and web apps
               that solve real business problems.
             </p>
-            <p className="text-[#94a3b8] text-lg sm:text-xl">
+            <p className="text-[#94a3b8] text-lg sm:text-xl leading-relaxed">
               I focus on delivering fast, effective solutions that enhance user
               experiences and streamline business operations.
             </p>
@@ -36,11 +54,16 @@ export const Hero = (): JSX.Element => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Image */}
-        <div className="hidden lg:flex justify-center lg:justify-end">
-          <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] overflow-hidden rounded-full border-4 border-[#334155] shadow-xl">
+        <motion.div
+          className="hidden lg:flex justify-center lg:justify-end"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] overflow-hidden rounded-full border-4 border-[#6366f1] shadow-xl">
             <Image
               src="/headshot.jpg?height=400&width=400"
               alt="Alex Appleget"
@@ -49,7 +72,7 @@ export const Hero = (): JSX.Element => {
               priority
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

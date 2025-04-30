@@ -1,10 +1,20 @@
 import { ServiceCard } from "@/components/ServiceCard/ServiceCard";
-import { JSX } from "react";
+import { JSX, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 export const Services = (): JSX.Element => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <section id="services" className="py-6 md:py-24">
-      <div className="mx-auto">
+      <motion.div
+        ref={ref}
+        className="mx-auto"
+        initial={{ opacity: 0, y: 100 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <div className="flex flex-col items-center text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-[#f1f5f9]">
             My Services
@@ -31,7 +41,7 @@ export const Services = (): JSX.Element => {
             icon="Zap"
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
