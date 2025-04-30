@@ -59,9 +59,9 @@ export const Hero = (): JSX.Element => {
         {/* Image */}
         <motion.div
           className="hidden lg:flex justify-center lg:justify-end"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.8 }}
         >
           <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] overflow-hidden rounded-full border-4 border-[#6366f1] shadow-xl">
             <Image
