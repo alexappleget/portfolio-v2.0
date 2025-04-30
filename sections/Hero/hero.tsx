@@ -7,8 +7,17 @@ import { Typewriter } from "react-simple-typewriter";
 
 export const Hero = (): JSX.Element => {
   return (
-    <section className="min-h-screen flex items-center justify-center lg:justify-start pb-20 md:pb-0">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center lg:justify-start pb-20 md:pb-0"
+    >
+      {/*Background Shapes*/}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-[#4f46e5] to-[#6366f1] rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-br from-[#4f46e5] to-[#6366f1] rounded-full blur-2xl opacity-20"></div>
+      </div>
+
+      <div className="z-10 grid lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <motion.div
           className="space-y-6"
@@ -20,7 +29,7 @@ export const Hero = (): JSX.Element => {
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl text-[#f1f5f9]">
               Hi, I&apos;m Alex, a
             </h1>
-            <span className="text-4xl font-bold text-[#6366f1] leading-relaxed">
+            <span className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl text-[#6366f1] leading-relaxed">
               <Typewriter
                 words={[
                   "Software Engineer",
