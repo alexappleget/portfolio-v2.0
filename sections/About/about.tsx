@@ -29,7 +29,7 @@ export const About = (): JSX.Element => {
 
         {/* Text Section */}
         <div className="space-y-4 order-1 lg:order-2 lg:row-auto row-start-2">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-[#f1f5f9]">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-[#f8fafc]">
             About Me
           </h2>
           <p className="text-lg text-[#94a3b8] leading-relaxed">
@@ -49,7 +49,7 @@ export const About = (): JSX.Element => {
           </p>
           <div className="pt-4">
             <button
-              className="inline-block px-6 py-3 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition-colors"
+              className="inline-block px-6 py-3 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition-colors hover:cursor-pointer"
               onClick={() =>
                 document
                   .getElementById("contact")

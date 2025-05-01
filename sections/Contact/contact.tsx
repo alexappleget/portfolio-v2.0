@@ -15,7 +15,7 @@ export const Contact = () => {
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-[#f1f5f9]">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-[#f8fafc]">
           Contact Me
         </h2>
         <p className="text-xl text-[#94a3b8] max-w-[600px]">

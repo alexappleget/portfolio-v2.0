@@ -13,8 +13,8 @@ export const Hero = (): JSX.Element => {
     >
       {/*Background Shapes*/}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-40 h-40 md:w-96 md:h-96 bg-gradient-to-br from-[#4f46e5] to-[#6366f1] rounded-full blur-3xl opacity-20"></div>
-        <div className="absolute bottom-10 right-10 w-40 h-40 md:w-96 md:h-96 bg-gradient-to-br from-[#4f46e5] to-[#6366f1] rounded-full blur-2xl opacity-20"></div>
+        <div className="absolute top-0 left-0 w-40 h-40 md:w-96 md:h-96 bg-gradient-to-br from-[#4f46e5] to-[#38bdf8] rounded-full blur-3xl opacity-10"></div>
+        <div className="absolute bottom-0 right-0 w-40 h-40 md:w-96 md:h-96 bg-gradient-to-br from-[#4f46e5] to-[#6366f1] rounded-full blur-2xl opacity-10"></div>
       </div>
 
       <div className="z-10 grid lg:grid-cols-2 gap-12 items-center">
@@ -26,10 +26,10 @@ export const Hero = (): JSX.Element => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl text-[#f1f5f9]">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#f8fafc]">
               Hi, I&apos;m Alex, a
             </h1>
-            <span className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl text-[#6366f1] leading-relaxed">
+            <span className="text-4xl sm:text-5xl font-semibold tracking-tight text-[#6366f1] leading-snug">
               <Typewriter
                 words={[
                   "Software Engineer",
@@ -40,7 +40,7 @@ export const Hero = (): JSX.Element => {
                 cursor
               />
             </span>
-            <p className="text-[#94a3b8] text-lg sm:text-xl leading-relaxed mt-2">
+            <p className="text-[#94a3b8] text-lg sm:text-xl leading-relaxed mt-4">
               I build scalable SaaS platforms, custom websites, and web apps
               that solve real business problems.
             </p>
@@ -52,7 +52,7 @@ export const Hero = (): JSX.Element => {
           <TechStack />
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <button
-              className="flex items-center px-6 py-3 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition hover:cursor-pointer hover:shadow-lg"
+              className="flex items-center px-6 py-3 bg-[#f59e0b] text-[#20242d] text-lg font-medium rounded-lg hover:bg-[#fbbf24] transition hover:cursor-pointer hover:shadow-lg"
               onClick={() =>
                 document
                   .getElementById("contact")

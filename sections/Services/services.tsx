@@ -16,10 +16,10 @@ export const Services = (): JSX.Element => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="flex flex-col items-center text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4 text-[#f1f5f9]">
+          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-[#f8fafc] mb-6">
             My Services
           </h2>
-          <p className="text-[#94a3b8] md:text-xl max-w-[800px]">
+          <p className="text-base sm:text-lg leading-relaxed text-[#94a3b8] max-w-[800px]">
             I offer a range of services to help businesses grow and succeed in
             the digital landscape.
           </p>

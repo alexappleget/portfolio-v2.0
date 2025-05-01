@@ -67,7 +67,12 @@ export const ContactForm = () => {
       resetForm();
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("An error occured. Please try again.");
+      toast.error("An error occured. Please try again.", {
+        style: {
+          background: "#ef4444",
+          color: "#f8fafc",
+        },
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -75,9 +80,9 @@ export const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-2">
         <div className="space-y-2">
-          <Label htmlFor="name" className="text-[#f1f5f9]">
+          <Label htmlFor="name" className="text-sm font-medium text-[#f8fafc]">
             Name
           </Label>
           <Input
@@ -85,13 +90,13 @@ export const ContactForm = () => {
             name="name"
             required
             placeholder="Your name"
-            className="bg-[#262b35] text-[#f1f5f9] border placeholder-[#94a3b8] border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]"
+            className="bg-[#262b35] text-[#f8fafc] border placeholder-[#94a3b8] border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]"
             onChange={handleChange}
             value={form.name}
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="email" className="text-[#f1f5f9]">
+          <Label htmlFor="email" className="text-sm font-medium text-[#f8fafc]">
             Email
           </Label>
           <Input
@@ -100,7 +105,7 @@ export const ContactForm = () => {
             type="email"
             required
             placeholder="Your email"
-            className="bg-[#262b35] text-[#f1f5f9] border placeholder-[#94a3b8] border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]"
+            className="bg-[#262b35] text-[#f8fafc] border placeholder-[#94a3b8] border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]"
             onChange={handleChange}
             value={form.email}
           />
@@ -108,7 +113,10 @@ export const ContactForm = () => {
       </div>
 
       <div className="space-y-2 sm:col-span-2">
-        <Label htmlFor="project-type" className="text-[#f1f5f9]">
+        <Label
+          htmlFor="project-type"
+          className="text-sm font-medium text-[#f8fafc]"
+        >
           Project Type
         </Label>
         <Select
@@ -117,31 +125,31 @@ export const ContactForm = () => {
           onValueChange={handleSelectChange}
           value={form.projectType}
         >
-          <SelectTrigger className="bg-[#262b35] text-[#f1f5f9] border border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]">
+          <SelectTrigger className="bg-[#262b35] text-[#f8fafc] border border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]">
             <SelectValue placeholder="Select project type" />
           </SelectTrigger>
           <SelectContent className="bg-[#262b35] border border-[#334155] rounded-lg shadow-lg">
             <SelectItem
               value="saas"
-              className="px-4 py-2 text-[#f1f5f9] hover:bg-[#334155] hover:text-white cursor-pointer"
+              className="px-4 py-2 text-[#f8fafc] hover:bg-[#334155] hover:text-white cursor-pointer"
             >
               SaaS Development
             </SelectItem>
             <SelectItem
               value="website"
-              className="px-4 py-2 text-[#f1f5f9] hover:bg-[#334155] hover:text-white cursor-pointer"
+              className="px-4 py-2 text-[#f8fafc] hover:bg-[#334155] hover:text-white cursor-pointer"
             >
               Custom Website
             </SelectItem>
             <SelectItem
               value="optimization"
-              className="px-4 py-2 text-[#f1f5f9] hover:bg-[#334155] hover:text-white cursor-pointer"
+              className="px-4 py-2 text-[#f8fafc] hover:bg-[#334155] hover:text-white cursor-pointer"
             >
               Web App Optimization
             </SelectItem>
             <SelectItem
               value="other"
-              className="px-4 py-2 text-[#f1f5f9] hover:bg-[#334155] hover:text-white cursor-pointer"
+              className="px-4 py-2 text-[#f8fafc] hover:bg-[#334155] hover:text-white cursor-pointer"
             >
               Other
             </SelectItem>
@@ -150,7 +158,7 @@ export const ContactForm = () => {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="message" className="text-[#f1f5f9]">
+        <Label htmlFor="message" className="text-sm font-medium text-[#f8fafc]">
           Message
         </Label>
         <Textarea
@@ -158,7 +166,7 @@ export const ContactForm = () => {
           name="message"
           required
           placeholder="Tell me about your project or idea"
-          className="bg-[#262b35] text-[#f1f5f9] border border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5] min-h-[120px]"
+          className="bg-[#262b35] text-[#f8fafc] border border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5] min-h-[120px]"
           onChange={handleChange}
           value={form.message}
         />
@@ -166,7 +174,7 @@ export const ContactForm = () => {
 
       <button
         type="submit"
-        className="w-full flex items-center justify-center px-4 py-2 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition hover:shadow-md"
+        className="w-full flex items-center justify-center px-4 py-2 bg-[#4f46e5] text-base font-medium text-[#f8fafc] rounded-lg hover:bg-[#6366f1] transition hover:shadow-md hover:cursor-pointer"
         disabled={isSubmitting}
       >
         {isSubmitting ? "Sending..." : "Send Message"}

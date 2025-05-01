@@ -5,7 +5,7 @@ import { JSX } from "react";
 export const Footer = (): JSX.Element => {
   return (
     <footer className="border-t border-[#334155] py-8 px-6 md:px-8 flex flex-wrap gap-6 items-center justify-between">
-      <p className="text-sm text-[#94a3b8]">
+      <p className="text-sm font-medium text-[#94a3b8]">
         &copy; {new Date().getFullYear()} Alex Appleget. All rights reserved.
       </p>
       <div className="flex gap-4">
@@ -16,7 +16,7 @@ export const Footer = (): JSX.Element => {
           aria-label="GitHub Profile"
         >
           <GithubIcon
-            className="text-[#94a3b8] hover:text-[#6366f1] transition-colors hover:cursor-pointer"
+            className="text-[#38bdf8] hover:text-[#6366f1] transition-colors hover:cursor-pointer"
             aria-hidden="true"
           />
         </Link>
@@ -27,7 +27,7 @@ export const Footer = (): JSX.Element => {
           aria-label="LinkedIn Profile"
         >
           <LinkedinIcon
-            className="text-[#94a3b8] hover:text-[#6366f1] transition-colors hover:cursor-pointer"
+            className="text-[#38bdf8] hover:text-[#6366f1] transition-colors hover:cursor-pointer"
             aria-hidden="true"
           />
         </Link>

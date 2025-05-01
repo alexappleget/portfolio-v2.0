@@ -29,17 +29,21 @@ export const ServiceCard = ({
   return (
     <Card className="h-full flex flex-col bg-[#262b35] border border-[#334155] hover:shadow-lg hover:scale-105 transition-transform duration-300">
       <CardHeader>
-        <div className="w-12 h-12 rounded-lg bg-[#4f46e5]/40 flex items-center justify-center mb-4">
-          <Icon className="h-6 w-6 text-[#6366f1]" />
+        <div className="w-12 h-12 rounded-lg bg-[#4f46e5]/20 flex items-center justify-center mb-4">
+          <Icon className="h-6 w-6 text-[#4f46e5]" />
         </div>
-        <CardTitle className="text-[#f1f5f9] text-lg">{title}</CardTitle>
+        <CardTitle className="text-[#f8fafc] text-xl font-semibold tracking-tight">
+          {title}
+        </CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-[#94a3b8]">{description}</p>
+        <p className="text-[#94a3b8] text-base leading-relaxed">
+          {description}
+        </p>
       </CardContent>
       <CardFooter>
         <button
-          className="flex items-center px-4 py-2 bg-[#4f46e5] text-white rounded-lg hover:bg-[#6366f1] transition hover:shadow-md"
+          className="flex items-center px-4 py-2 bg-[#4f46e5] text-[#f8fafc] rounded-lg hover:bg-[#6366f1] transition hover:shadow-md hover:cursor-pointer"
           onClick={() =>
             document
               .getElementById("contact")
