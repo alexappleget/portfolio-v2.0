@@ -33,8 +33,8 @@ export const Hero = (): JSX.Element => {
               <Typewriter
                 words={[
                   "Software Engineer",
-                  "Problem Solver",
-                  "Tech Enthusiast",
+                  "Custom Website Builder",
+                  "Web Application Architect",
                 ]}
                 loop
                 cursor
