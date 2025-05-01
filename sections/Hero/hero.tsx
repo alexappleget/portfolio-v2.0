@@ -13,8 +13,8 @@ export const Hero = (): JSX.Element => {
     >
       {/*Background Shapes*/}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-[#4f46e5] to-[#6366f1] rounded-full blur-3xl opacity-20"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-br from-[#4f46e5] to-[#6366f1] rounded-full blur-2xl opacity-20"></div>
+        <div className="absolute top-10 left-10 w-40 h-40 md:w-96 md:h-96 bg-gradient-to-br from-[#4f46e5] to-[#6366f1] rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 md:w-96 md:h-96 bg-gradient-to-br from-[#4f46e5] to-[#6366f1] rounded-full blur-2xl opacity-20"></div>
       </div>
 
       <div className="z-10 grid lg:grid-cols-2 gap-12 items-center">
