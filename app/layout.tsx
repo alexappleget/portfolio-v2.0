@@ -52,7 +52,7 @@ export default function RootLayout({
         {showScrollToTop && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-23 right-10 flex items-center gap-2 px-4 py-3 bg-[#4f46e5] text-white text-lg font-medium rounded-full shadow-lg hover:bg-[#6366f1] transition-transform transform hover:scale-105 hover:cursor-pointer"
+            className="fixed bottom-23 right-10 flex items-center gap-2 px-4 py-3 bg-[#4f46e5] text-[#f8fafc] text-lg font-medium rounded-full shadow-lg hover:bg-[#6366f1] transition-transform transform hover:scale-105 hover:cursor-pointer"
           >
             <span className="material-icons text-2xl">
               <ArrowUp />

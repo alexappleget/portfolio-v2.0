@@ -18,7 +18,7 @@ export const Contact = () => {
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-[#f8fafc]">
           Contact Me
         </h2>
-        <p className="text-xl text-[#94a3b8] max-w-[600px]">
+        <p className="text-xl text-[#cbd5e1] max-w-[600px]">
           Not sure where to start? Feel free to reach out with your ideas or
           questions. Let&apos;s create something amazing together!
         </p>

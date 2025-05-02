@@ -37,7 +37,7 @@ export const ServiceCard = ({
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-[#94a3b8] text-base leading-relaxed">
+        <p className="text-[#cbd5e1] text-base leading-relaxed">
           {description}
         </p>
       </CardContent>

@@ -90,7 +90,7 @@ export const ContactForm = () => {
             name="name"
             required
             placeholder="Your name"
-            className="bg-[#262b35] text-[#f8fafc] border placeholder-[#94a3b8] border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]"
+            className="bg-[#262b35] text-[#f8fafc] border placeholder-[#cbd5e1] border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]"
             onChange={handleChange}
             value={form.name}
           />
@@ -105,7 +105,7 @@ export const ContactForm = () => {
             type="email"
             required
             placeholder="Your email"
-            className="bg-[#262b35] text-[#f8fafc] border placeholder-[#94a3b8] border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]"
+            className="bg-[#262b35] text-[#cbd5e1] border placeholder-[#cbd5e1] border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]"
             onChange={handleChange}
             value={form.email}
           />

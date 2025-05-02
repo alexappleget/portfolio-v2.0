@@ -40,11 +40,11 @@ export const Hero = (): JSX.Element => {
                 cursor
               />
             </span>
-            <p className="text-[#94a3b8] text-lg sm:text-xl leading-relaxed mt-4">
+            <p className="text-[#cbd5e1] text-lg sm:text-xl leading-relaxed mt-4">
               I build scalable SaaS platforms, custom websites, and web apps
               that solve real business problems.
             </p>
-            <p className="text-[#94a3b8] text-lg sm:text-xl leading-relaxed">
+            <p className="text-[#cbd5e1] text-lg sm:text-xl leading-relaxed">
               I focus on delivering fast, effective solutions that enhance user
               experiences and streamline business operations.
             </p>
