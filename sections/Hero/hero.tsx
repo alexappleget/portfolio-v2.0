@@ -9,7 +9,7 @@ export const Hero = (): JSX.Element => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center lg:justify-start pb-20 md:pb-0"
+      className="min-h-screen flex items-center justify-center lg:justify-start mb-0"
     >
       {/*Background Shapes*/}
       <div className="absolute inset-0">

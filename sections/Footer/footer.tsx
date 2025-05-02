@@ -4,7 +4,7 @@ import { JSX } from "react";
 
 export const Footer = (): JSX.Element => {
   return (
-    <footer className="border-t border-[#334155] py-8 px-6 md:px-8 flex flex-wrap gap-6 items-center justify-between">
+    <footer className="border-t border-[#334155] flex flex-wrap gap-6 items-center justify-between py-8">
       <p className="text-sm font-medium text-[#cbd5e1]">
         &copy; {new Date().getFullYear()} Alex Appleget. All rights reserved.
       </p>

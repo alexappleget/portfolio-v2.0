@@ -7,7 +7,7 @@ export const Contact = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="contact" className="py-12 md:py-24">
+    <section id="contact">
       <motion.div
         ref={ref}
         className="flex flex-col items-center text-center mb-12"

@@ -7,7 +7,7 @@ export const Services = (): JSX.Element => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="services" className="py-6 md:py-24">
+    <section id="services" className="mt-10 md:mt-20">
       <motion.div
         ref={ref}
         className="mx-auto"
