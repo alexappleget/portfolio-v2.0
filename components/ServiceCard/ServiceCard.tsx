@@ -55,7 +55,7 @@ export const ServiceCard = ({
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            aria-label="Get in contact to learn more"
+            aria-label="Scroll to contact form"
           >
             Learn More
             <ArrowRight className="ml-2 h-4 w-4" />

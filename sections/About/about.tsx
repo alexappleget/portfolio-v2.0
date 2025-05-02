@@ -20,7 +20,7 @@ export const About = (): JSX.Element => {
           <div className="relative w-full h-[300px] sm:h-[400px] rounded-lg overflow-hidden shadow-lg">
             <Image
               src="/sunglasses.jpg?height=400&width=600"
-              alt="Alex in downtown Austin enjoying the city"
+              alt="Alex Appleget enjoying the city in downtown Austin"
               fill
               className="object-cover"
               priority

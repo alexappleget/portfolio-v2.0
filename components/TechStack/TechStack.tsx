@@ -24,7 +24,10 @@ export const TechStack = () => {
           key={tech.name}
           className="flex items-center gap-2 bg-[#4B5563]/40 border border-[#4B5563] rounded-full px-3 py-1 text-sm text-[#f8fafc] shadow-md hover:shadow-lg transition-transform transform hover:scale-105"
         >
-          <tech.icon className={`h-5 w-5 ${tech.color} drop-shadow-md`} />
+          <tech.icon
+            className={`h-5 w-5 ${tech.color} drop-shadow-md`}
+            aria-hidden="true"
+          />
           <span className="font-medium">{tech.name}</span>
         </div>
       ))}

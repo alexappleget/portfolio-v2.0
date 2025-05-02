@@ -93,6 +93,7 @@ export const ContactForm = () => {
             className="bg-[#262b35] text-[#f8fafc] border placeholder-[#cbd5e1] border-[#334155] rounded-lg focus:ring-[#f59e0b] focus:border-[#f59e0b]"
             onChange={handleChange}
             value={form.name}
+            aria-label="name"
           />
         </div>
         <div className="space-y-2">
@@ -108,6 +109,7 @@ export const ContactForm = () => {
             className="bg-[#262b35] text-[#cbd5e1] border placeholder-[#cbd5e1] border-[#334155] rounded-lg focus:ring-[#f59e0b] focus:border-[#f59e0b]"
             onChange={handleChange}
             value={form.email}
+            aria-label="email"
           />
         </div>
       </div>

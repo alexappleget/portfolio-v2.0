@@ -2,6 +2,7 @@
 
 import { About } from "@/sections/About/about";
 import { Contact } from "@/sections/Contact/contact";
+import { FAQ } from "@/sections/FAQ/FAQ";
 import { Footer } from "@/sections/Footer/footer";
 import { Hero } from "@/sections/Hero/hero";
 import { Services } from "@/sections/Services/services";
@@ -13,6 +14,7 @@ export default function Home() {
       <Services />
       <About />
       <Contact />
+      <FAQ />
       <Footer />
     </main>
   );
