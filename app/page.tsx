@@ -8,7 +8,7 @@ import { Services } from "@/sections/Services/services";
 
 export default function Home() {
   return (
-    <main className="bg-[#20242d] px-8 md:px-16 lg:px-32 space-y-32 md:space-y-72">
+    <main className="bg-gradient-to-b from-[#1e293b] to-[#20242d] px-8 md:px-16 lg:px-32">
       <Hero />
       <Services />
       <About />

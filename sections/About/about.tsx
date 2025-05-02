@@ -7,10 +7,10 @@ export const About = (): JSX.Element => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="about">
+    <section id="about" className="py-16 md:py-32">
       <motion.div
         ref={ref}
-        className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center"
+        className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center pt-10"
         initial={{ opacity: 0, y: 100 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -20,41 +20,46 @@ export const About = (): JSX.Element => {
           <div className="relative w-full h-[300px] sm:h-[400px] rounded-lg overflow-hidden shadow-lg">
             <Image
               src="/sunglasses.jpg?height=400&width=600"
-              alt="Alex working"
+              alt="Alex in downtown Austin enjoying the city"
               fill
               className="object-cover"
+              priority
             />
           </div>
         </div>
 
         {/* Text Section */}
         <div className="space-y-4 order-1 lg:order-2 lg:row-auto row-start-2">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-[#f8fafc]">
+          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl text-[#f8fafc]">
             About Me
           </h2>
           <p className="text-lg text-[#cbd5e1] leading-relaxed">
-            I&apos;m a passionate Full-Stack Software Engineer dedicated to
-            creating impactful digital solutions. My journey in software
+            I&apos;m Alex, a passionate Full-Stack Software Engineer dedicated
+            to creating impactful digital solutions. My journey in software
             development has been driven by a desire to solve real-world problems
             through technology.
           </p>
           <p className="text-lg text-[#cbd5e1] leading-relaxed">
-            I&apos;m always exploring new technologies and methodologies to
-            solve problems in innovative ways. I&apos;m excited to work with
-            clients from all industries and help them bring their ideas to life.
+            I specialize in building scalable SaaS platforms, custom websites,
+            and optimizing web applications to deliver exceptional user
+            experiences. I thrive on collaborating with clients to bring their
+            ideas to life.
           </p>
           <p className="text-lg text-[#cbd5e1] leading-relaxed">
             Based in the United States, I work remotely with clients nationwide,
-            bringing a client-centric approach to every project.
+            bringing a client-centric approach to every project. I&apos;m
+            constantly exploring new technologies and methodologies to stay
+            ahead in the ever-evolving tech landscape.
           </p>
           <div className="pt-4">
             <button
-              className="inline-block px-6 py-3 bg-[#4f46e5] text-[#f8fafc] rounded-lg hover:bg-[#6366f1] transition-colors hover:cursor-pointer"
+              className="inline-block px-6 py-3 bg-[#4f46e5] text-[#f8fafc] rounded-lg hover:bg-[#6366f1] hover:cursor-pointer hover:scale-105 transition-transform"
               onClick={() =>
                 document
                   .getElementById("contact")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
+              aria-label="Scroll to Contact Section"
             >
               Get in Touch
             </button>

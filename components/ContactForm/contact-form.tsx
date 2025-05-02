@@ -90,7 +90,7 @@ export const ContactForm = () => {
             name="name"
             required
             placeholder="Your name"
-            className="bg-[#262b35] text-[#f8fafc] border placeholder-[#cbd5e1] border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]"
+            className="bg-[#262b35] text-[#f8fafc] border placeholder-[#cbd5e1] border-[#334155] rounded-lg focus:ring-[#f59e0b] focus:border-[#f59e0b]"
             onChange={handleChange}
             value={form.name}
           />
@@ -105,7 +105,7 @@ export const ContactForm = () => {
             type="email"
             required
             placeholder="Your email"
-            className="bg-[#262b35] text-[#cbd5e1] border placeholder-[#cbd5e1] border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]"
+            className="bg-[#262b35] text-[#cbd5e1] border placeholder-[#cbd5e1] border-[#334155] rounded-lg focus:ring-[#f59e0b] focus:border-[#f59e0b]"
             onChange={handleChange}
             value={form.email}
           />
@@ -125,7 +125,7 @@ export const ContactForm = () => {
           onValueChange={handleSelectChange}
           value={form.projectType}
         >
-          <SelectTrigger className="bg-[#262b35] text-[#f8fafc] border border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5]">
+          <SelectTrigger className="bg-[#262b35] text-[#f8fafc] border border-[#334155] rounded-lg focus:ring-[#f59e0b] focus:border-[#f59e0b]">
             <SelectValue placeholder="Select project type" />
           </SelectTrigger>
           <SelectContent className="bg-[#262b35] border border-[#334155] rounded-lg shadow-lg">
@@ -166,7 +166,7 @@ export const ContactForm = () => {
           name="message"
           required
           placeholder="Tell me about your project or idea"
-          className="bg-[#262b35] text-[#f8fafc] border border-[#334155] rounded-lg focus:ring-[#4f46e5] focus:border-[#4f46e5] min-h-[120px]"
+          className="bg-[#262b35] text-[#f8fafc] placeholder:text-[#cbd5e1] border border-[#334155] rounded-lg focus:ring-[#f59e0b] focus:border-[#f59e0b] min-h-[120px]"
           onChange={handleChange}
           value={form.message}
         />
@@ -174,7 +174,7 @@ export const ContactForm = () => {
 
       <button
         type="submit"
-        className="w-full flex items-center justify-center px-4 py-2 bg-[#4f46e5] text-base font-medium text-[#f8fafc] rounded-lg hover:bg-[#6366f1] transition hover:shadow-md hover:cursor-pointer"
+        className="w-full flex items-center justify-center px-4 py-2 bg-[#f59e0b] text-base font-medium text-[#20242d] rounded-lg hover:bg-[#fbbf24] transition hover:shadow-md hover:cursor-pointer"
         disabled={isSubmitting}
       >
         {isSubmitting ? "Sending..." : "Send Message"}

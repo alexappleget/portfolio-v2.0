@@ -1,26 +1,27 @@
 import { TechStack } from "@/components/TechStack/TechStack";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import Image from "next/image";
 import { JSX } from "react";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import Link from "next/link";
 
 export const Hero = (): JSX.Element => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center lg:justify-start pb-15 mb-0"
+      className="relative min-h-screen flex items-center justify-center lg:justify-start"
     >
       {/*Background Shapes*/}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-40 h-40 md:w-96 md:h-96 bg-gradient-to-br from-[#4f46e5] to-[#38bdf8] rounded-full blur-3xl opacity-10"></div>
-        <div className="absolute bottom-0 right-0 w-40 h-40 md:w-96 md:h-96 bg-gradient-to-br from-[#4f46e5] to-[#6366f1] rounded-full blur-2xl opacity-10"></div>
+        <div className="absolute top-0 left-0 w-40 h-40 md:w-96 md:h-96 bg-gradient-to-br from-[#4f46e5] to-[#38bdf8] rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute bottom-0 right-0 w-40 h-40 md:w-96 md:h-96 bg-gradient-to-br from-[#4f46e5] to-[#6366f1] rounded-full blur-2xl opacity-20"></div>
       </div>
 
       <div className="z-10 grid lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <motion.div
-          className="space-y-6"
+          className="space-y-8"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -49,19 +50,33 @@ export const Hero = (): JSX.Element => {
               experiences and streamline business operations.
             </p>
           </div>
+
+          {/* Tech Stack */}
           <TechStack />
+
+          {/* Call-to-Actions */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <button
-              className="flex items-center px-6 py-3 bg-[#f59e0b] text-[#20242d] text-lg font-medium rounded-lg hover:bg-[#fbbf24] transition hover:cursor-pointer hover:shadow-lg"
+              className="flex items-center px-6 py-3 bg-[#f59e0b] text-[#20242d] text-lg font-medium rounded-lg hover:bg-[#fbbf24] hover:scale-105 transition-transform hover:cursor-pointer hover:shadow-lg"
               onClick={() =>
                 document
-                  .getElementById("contact")
+                  .getElementById("services")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
+              aria-label="Scroll to Services Section"
             >
-              Let&apos;s Bring Your Ideas to Life
-              <ArrowRight className="ml-2 h-5 w-5" />
+              Get Started
+              <ArrowRight className="ml-4 h-5 w-5" />
             </button>
+            <Link
+              href=""
+              target="_blank"
+              rel="noopener noreferror"
+              className="flex items-center px-6 py-3 bg-transparent text-[#38bdf8] border-2 border-[#38bdf8] text-lg font-medium rounded-lg hover:bg-[#38bdf8] hover:text-[#20242d] hover:scale-105 transition-transform hover:cursor-pointer hover:shadow-lg"
+            >
+              Book a Free Consultation
+              <Calendar className="ml-4 h-5 w-5" />
+            </Link>
           </div>
         </motion.div>
 
@@ -72,10 +87,17 @@ export const Hero = (): JSX.Element => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] overflow-hidden rounded-full border-4 border-[#6366f1] shadow-xl">
+          <div
+            className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] overflow-hidden rounded-full border-4 border-[#6366f1] shadow-xl hover:cursor-pointer hover:scale-105 transition-transform"
+            onClick={() =>
+              document
+                .getElementById("about")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
             <Image
               src="/headshot.jpg?height=400&width=400"
-              alt="Alex Appleget"
+              alt="Alex Appleget, Full-Stack Software Engineer"
               fill
               className="object-cover"
               priority

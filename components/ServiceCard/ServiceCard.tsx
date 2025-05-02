@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "../Card/card";
 import { JSX } from "react";
+import { motion } from "framer-motion";
 
 interface ServiceCardProps {
   title: string;
@@ -27,33 +28,40 @@ export const ServiceCard = ({
 
   const Icon = IconComponent[icon];
   return (
-    <Card className="h-full flex flex-col bg-[#262b35] border border-[#334155] hover:shadow-lg hover:scale-105 transition-transform duration-300">
-      <CardHeader>
-        <div className="w-12 h-12 rounded-lg bg-[#4f46e5]/20 flex items-center justify-center mb-4">
-          <Icon className="h-6 w-6 text-[#4f46e5]" />
-        </div>
-        <CardTitle className="text-[#f8fafc] text-xl font-semibold tracking-tight">
-          {title}
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="flex-grow">
-        <p className="text-[#cbd5e1] text-base leading-relaxed">
-          {description}
-        </p>
-      </CardContent>
-      <CardFooter>
-        <button
-          className="flex items-center px-4 py-2 bg-[#4f46e5] text-[#f8fafc] rounded-lg hover:bg-[#6366f1] transition hover:shadow-md hover:cursor-pointer"
-          onClick={() =>
-            document
-              .getElementById("contact")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
-        >
-          Let&apos;s Build Together
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </button>
-      </CardFooter>
-    </Card>
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ duration: 0.3 }}
+    >
+      <Card className="h-full flex flex-col bg-[#2d3748] border border-[#4B5563] hover:shadow-lg">
+        <CardHeader>
+          <div className="w-12 h-12 rounded-lg bg-[#38bdf8]/20 flex items-center justify-center mb-4">
+            <Icon className="h-6 w-6 text-[#38bdf8]" />
+          </div>
+          <CardTitle className="text-[#f8fafc] text-xl font-semibold tracking-tight">
+            {title}
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="flex-grow">
+          <p className="text-[#cbd5e1] text-base leading-relaxed">
+            {description}
+          </p>
+        </CardContent>
+        <CardFooter>
+          <button
+            className="flex items-center px-4 py-2 bg-[#38bdf8] text-[#20242d] rounded-lg hover:bg-[#4f46e5] hover:text-[#f8fafc] transition hover:shadow-md hover:cursor-pointer"
+            onClick={() =>
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            aria-label="Get in contact to learn more"
+          >
+            Learn More
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </button>
+        </CardFooter>
+      </Card>
+    </motion.div>
   );
 };
