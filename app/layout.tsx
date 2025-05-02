@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -60,6 +61,7 @@ export default function RootLayout({
             <span>Scroll to Top</span>
           </button>
         )}
+        <Analytics />
       </body>
     </html>
   );
