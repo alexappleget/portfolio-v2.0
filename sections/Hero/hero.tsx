@@ -2,7 +2,6 @@ import { TechStack } from "@/components/TechStack/TechStack";
 import { ArrowRight, Calendar } from "lucide-react";
 import Image from "next/image";
 import { JSX } from "react";
-import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
 
@@ -20,12 +19,7 @@ export const Hero = (): JSX.Element => {
 
       <div className="z-10 grid lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
-        <motion.div
-          className="space-y-8"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
+        <div className="space-y-8">
           <div className="space-y-4">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#f8fafc]">
               Hi, I&apos;m Alex, a
@@ -78,15 +72,10 @@ export const Hero = (): JSX.Element => {
               <Calendar className="ml-4 h-5 w-5" />
             </Link>
           </div>
-        </motion.div>
+        </div>
 
         {/* Image */}
-        <motion.div
-          className="hidden lg:flex justify-center lg:justify-end"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+        <div className="hidden lg:flex justify-center lg:justify-end">
           <div
             className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] overflow-hidden rounded-full border-4 border-[#6366f1] shadow-xl hover:cursor-pointer hover:scale-105 transition-transform"
             onClick={() =>
@@ -103,7 +92,7 @@ export const Hero = (): JSX.Element => {
               priority
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
