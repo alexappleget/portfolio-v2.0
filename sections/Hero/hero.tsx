@@ -63,7 +63,7 @@ export const Hero = (): JSX.Element => {
               <ArrowRight className="ml-4 h-5 w-5" />
             </button>
             <Link
-              href=""
+              href="https://calendly.com/alexappleget2014/30min"
               target="_blank"
               rel="noopener noreferror"
               className="flex items-center px-6 py-3 bg-transparent text-[#38bdf8] border-2 border-[#38bdf8] text-lg font-medium rounded-lg hover:bg-[#38bdf8] hover:text-[#20242d] hover:scale-105 transition-transform hover:cursor-pointer hover:shadow-lg"
