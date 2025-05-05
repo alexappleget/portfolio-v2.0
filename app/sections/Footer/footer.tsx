@@ -1,3 +1,4 @@
+import { siteMetadata } from "@/app/data/siteMetadata";
 import { GithubIcon, LinkedinIcon } from "lucide-react";
 import Link from "next/link";
 import { JSX } from "react";
@@ -10,7 +11,7 @@ export const Footer = (): JSX.Element => {
       </p>
       <div className="flex gap-4">
         <Link
-          href="https://github.com/alexappleget"
+          href={`${siteMetadata.github}`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub Profile"
@@ -21,7 +22,7 @@ export const Footer = (): JSX.Element => {
           />
         </Link>
         <Link
-          href="https://www.linkedin.com/in/alex-appleget/"
+          href={`${siteMetadata.linkedin}`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn Profile"

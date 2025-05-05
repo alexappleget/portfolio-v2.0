@@ -1,4 +1,4 @@
-import { TechStack } from "@/components/TechStack/TechStack";
+import { TechStack } from "@/app/components/TechStack/TechStack";
 import { ArrowRight, Calendar } from "lucide-react";
 import Image from "next/image";
 import { JSX } from "react";

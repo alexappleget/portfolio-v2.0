@@ -1,14 +1,14 @@
 "use client";
 
-import { Loader } from "@/components/Loader/Loader";
-import { About } from "@/sections/About/about";
-import { Contact } from "@/sections/Contact/contact";
-import { FAQ } from "@/sections/FAQ/FAQ";
-import { Footer } from "@/sections/Footer/footer";
-import { Hero } from "@/sections/Hero/hero";
-import { Services } from "@/sections/Services/services";
+import { About } from "@/app/sections/About/about";
+import { Contact } from "@/app/sections/Contact/contact";
+import { FAQ } from "@/app/sections/FAQ/FAQ";
+import { Footer } from "@/app/sections/Footer/footer";
+import { Hero } from "@/app/sections/Hero/hero";
+import { Services } from "@/app/sections/Services/services";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Loader } from "./components/Loader/Loader";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);

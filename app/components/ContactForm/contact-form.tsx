@@ -1,15 +1,15 @@
 "use client";
 
-import { Input } from "@/components/Input/input";
-import { Label } from "@/components/Label/label";
+import { Input } from "../Input/input";
+import { Label } from "../Label/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/Select/select";
-import { Textarea } from "@/components/TextArea/textarea";
+} from "../Select/select";
+import { Textarea } from "../TextArea/textarea";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 

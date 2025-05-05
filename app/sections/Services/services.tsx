@@ -1,4 +1,4 @@
-import { ServiceCard } from "@/components/ServiceCard/ServiceCard";
+import { ServiceCard } from "@/app/components/ServiceCard/ServiceCard";
 import { JSX, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 

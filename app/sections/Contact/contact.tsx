@@ -1,4 +1,4 @@
-import { ContactForm } from "@/components/ContactForm/contact-form";
+import { ContactForm } from "@/app/components/ContactForm/contact-form";
 import { motion, useInView } from "framer-motion";
 import { Calendar, Zap } from "lucide-react";
 import { useRef } from "react";
