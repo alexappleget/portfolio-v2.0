@@ -32,7 +32,8 @@ export const projects: IProject[] = [
     title: "AI Chatbot",
     description:
       "Coming Soon - AI Chatbot is a personal assistant app that will let users ask questions about me, my work, and web development. Built with Next.js, TypeScript, Supabase, and OpenAI, it’s designed as an interactive portfolio and helpful learning resource.",
-    image: "/project-finance.png",
+    image:
+      "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     liveUrl: "",
     codeUrl: "",
     techStack: ["NextJS", "TypeScript", "Supabase", "OpenAI"],
