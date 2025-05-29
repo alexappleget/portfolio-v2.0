@@ -9,5 +9,6 @@ export const siteMetadata = {
   siteRepo: "https://github.com/alexappleget/portfolio-v2.0",
   github: "https://github.com/alexappleget",
   linkedin: "https://www.linkedin.com/in/alex-appleget",
+  twitter: "https://x.com/alexlikescoding",
   locale: "en-us",
 };

@@ -1,98 +1,145 @@
 import { TechStack } from "@/app/components/TechStack/TechStack";
-import { ArrowRight, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 import Image from "next/image";
-import { JSX } from "react";
-import { Typewriter } from "react-simple-typewriter";
+import { JSX, useRef } from "react";
 import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
+import ParticleBackground from "@/app/components/ParticleBackground/ParticleBackground";
+import { ScrollIndicator } from "@/app/components/ScrollIndicator.tsx/ScrollIndicator";
 
 export const Hero = (): JSX.Element => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
+
   return (
     <section
+      ref={containerRef}
       id="hero"
-      className="relative min-h-screen flex items-center justify-center lg:justify-start"
+      className="relative min-h-screen flex items-center justify-center lg:justify-start px-8 md:px-16 lg:px-32 bg-gradient-to-br from-violet-950 via-indigo-900 to-blue-900"
     >
-      {/*Background Shapes*/}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-40 h-40 md:w-96 md:h-96 bg-gradient-to-br from-[#4f46e5] to-[#38bdf8] rounded-full blur-3xl opacity-20"></div>
-        <div className="absolute bottom-0 right-0 w-40 h-40 md:w-96 md:h-96 bg-gradient-to-br from-[#4f46e5] to-[#6366f1] rounded-full blur-2xl opacity-20"></div>
-      </div>
+      <ParticleBackground />
 
       <div className="z-10 grid lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
-        <div className="space-y-8">
+        <motion.div style={{ opacity, scale, y }} className="space-y-8">
           <div className="space-y-4">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#f8fafc]">
-              Hi, I&apos;m Alex, a
-            </h1>
-            <span className="text-4xl sm:text-5xl font-semibold tracking-tight text-[#6366f1] leading-snug">
-              <Typewriter
-                words={[
-                  "Software Engineer",
-                  "Website Builder",
-                  "Web App Architect",
-                ]}
-                loop
-                cursor
-              />
-            </span>
-            <p className="text-[#cbd5e1] text-lg sm:text-xl leading-relaxed mt-4">
-              I build scalable SaaS platforms, custom websites, and web apps
-              that solve real business problems.
-            </p>
-            <p className="text-[#cbd5e1] text-lg sm:text-xl leading-relaxed">
-              I focus on delivering fast, effective solutions that enhance user
-              experiences and streamline business operations.
-            </p>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-3xl font-bold leading-tight tracking-tighter text-white md:text-5xl lg:text-6xl"
+            >
+              Hi, I&apos;m{" "}
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                Alex
+              </span>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="text-cyan-100 text-xl sm:text-2xl leading-relaxed mt-4"
+            >
+              A Full-Stack Software Engineer who thrives on building clean,
+              scalable, and user-focused web apps that bring real ideas to life.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="text-cyan-200/80 text-lg sm:text-xl leading-relaxed"
+            >
+              I help startups and businesses turn their complex ideas into fast,
+              modern, and scalable digital solutions using the latest web
+              technologies.
+            </motion.p>
           </div>
 
           {/* Tech Stack */}
-          <TechStack />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+          >
+            <h3 className="mb-3 text-lg font-medium text-purple-300">
+              Tech Stack
+            </h3>
+            <TechStack />
+          </motion.div>
 
           {/* Call-to-Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+          >
             <button
-              className="flex items-center px-6 py-3 bg-[#f59e0b] text-[#20242d] text-lg font-medium rounded-lg hover:bg-[#fbbf24] hover:scale-105 transition-transform hover:cursor-pointer hover:shadow-lg"
+              className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 text-lg font-medium rounded-lg transition-all duration-300
+    hover:shadow-[0_0_24px_4px_rgba(168,85,247,0.6),0_0_40px_8px_rgba(236,72,153,0.4)]
+    hover:from-purple-600 hover:to-pink-600 focus:ring-4 focus:ring-cyan-400/50 focus:outline-none active:scale-95 hover:scale-105 hover:cursor-pointer"
               onClick={() =>
                 document
-                  .getElementById("services")
+                  .getElementById("contact")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              aria-label="Scroll to Services Section"
+              aria-label="Scroll to Contact Form Section"
             >
-              Get Started
-              <ArrowRight className="ml-4 h-5 w-5" />
+              <span className="relative z-10">
+                Let&apos;s Bring Your Ideas to Life
+              </span>
+              <span className="absolute inset-0 -z-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 blur-xl transition-opacity duration-300 hover:opacity-70"></span>
             </button>
             <Link
               href="https://calendly.com/alexappleget2014/30min"
               target="_blank"
               rel="noopener noreferror"
-              className="flex items-center px-6 py-3 bg-transparent text-[#38bdf8] border-2 border-[#38bdf8] text-lg font-medium rounded-lg hover:bg-[#38bdf8] hover:text-[#20242d] hover:scale-105 transition-transform hover:cursor-pointer hover:shadow-lg"
+              className="flex items-center px-6 py-3 text-lg font-medium rounded-lg hover:scale-105 hover:cursor-pointer hover:shadow-lg border-2 border-purple-400 text-purple-200 transition-all hover:bg-purple-900/30 hover:text-white"
             >
               Book a Free Consultation
               <Calendar className="ml-4 h-5 w-5" />
             </Link>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Image */}
         <div className="hidden lg:flex justify-center lg:justify-end">
-          <div
-            className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] overflow-hidden rounded-full border-4 border-[#6366f1] shadow-xl hover:cursor-pointer hover:scale-105 transition-transform"
-            onClick={() =>
-              document
-                .getElementById("about")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            <Image
-              src="/headshot.jpg?height=400&width=400"
-              alt="Alex Appleget, Full-Stack Software Engineer"
-              fill
-              className="object-cover"
-              priority
-            />
+          <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] flex items-center justify-center">
+            {/* Animated Border Glow */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 opacity-75 blur-2xl pointer-events-none z-0"></div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 opacity-50 blur-3xl pointer-events-none z-0"></div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              style={{ opacity }}
+              className="relative w-full h-full overflow-hidden rounded-full border-4 border-purple-400 shadow-xl shadow-purple-500/30 hover:cursor-pointer hover:scale-105 transition-transform z-10"
+              onClick={() =>
+                document
+                  .getElementById("about")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              <Image
+                src="/headshot.jpg?height=400&width=400"
+                alt="Alex Appleget, Full-Stack Software Engineer"
+                fill
+                className="object-cover"
+                priority
+              />
+            </motion.div>
           </div>
         </div>
+
+        {/* Scroll indicator */}
+        <ScrollIndicator />
       </div>
     </section>
   );
