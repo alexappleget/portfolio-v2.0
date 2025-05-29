@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Particles from "react-tsparticles";
-import type { Container, Engine } from "tsparticles-engine";
+import type { Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 
 export default function ParticleBackground() {
@@ -16,20 +16,12 @@ export default function ParticleBackground() {
     await loadSlim(engine);
   }, []);
 
-  const particlesLoaded = useCallback(
-    async (container: Container | undefined) => {
-      // Optional: Do something when particles are loaded
-    },
-    []
-  );
-
   if (!isClient) return null;
 
   return (
     <Particles
       id="tsparticles"
       init={particlesInit}
-      loaded={particlesLoaded}
       options={{
         fpsLimit: 60,
         interactivity: {
