@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, ExternalLink, Eye, Github } from "lucide-react";
+import { ArrowUpRight, Eye, Github } from "lucide-react";
 import { IProjectCard } from "@/Types/interface";
 import Link from "next/link";
 import Image from "next/image";
