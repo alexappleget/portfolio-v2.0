@@ -6,7 +6,7 @@ export const projects: IProject[] = [
     title: "Secret Santa Exchange",
     description:
       "Elfgorithm is an AI-powered Secret Santa platform that makes gift exchanges delightful and effortless. Perfect for organizing gift exchanges between colleagues, friends, and family, Elfgorithm takes the guesswork out of gift-giving with personalized AI suggestions.",
-    image: "/project-taskflow.png",
+    image: "/elecretanta.png",
     liveUrl: "https://elfgorithm.vercel.app/",
     codeUrl: "https://github.com/LetsGetTechnical/elecretanta",
     techStack: ["Next.js", "TypeScript", "Supabase", "OpenAI"],
@@ -19,7 +19,7 @@ export const projects: IProject[] = [
     title: "Gridiron Survivor",
     description:
       "Gridiron Survivor is an NFL pick’em web app that lets users join leagues, make weekly picks, and compete to stay alive. Built with Next.js, React, and Appwrite, it features custom lockout logic, real-time updates, and a clean, responsive UI.",
-    image: "/project-ecoshop.png",
+    image: "/gridiron-survivor.png",
     liveUrl: "https://www.gridironsurvivor.com/",
     codeUrl: "https://github.com/LetsGetTechnical/gridiron-survivor",
     techStack: ["Next.js", "TypeScript", "Appwrite"],

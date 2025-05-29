@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, ExternalLink, Eye, Github } from "lucide-react";
 import { IProjectCard } from "@/Types/interface";
 import Link from "next/link";
+import Image from "next/image";
 
 export const ProjectCard = ({
   project,
@@ -41,25 +42,12 @@ export const ProjectCard = ({
       >
         {/* Project Image */}
         <div className="relative aspect-video overflow-hidden">
-          <motion.div
-            className="h-full w-full bg-gradient-to-br from-indigo-900 to-purple-900"
-            whileHover={project.comingSoon ? {} : { scale: 1.05 }}
-            transition={{ duration: 0.4 }}
-          >
-            <div className="flex h-full items-center justify-center">
-              <motion.div
-                className="text-white/50"
-                animate={
-                  hoveredIndex === index && !project.comingSoon
-                    ? { scale: [1, 1.2, 1], rotate: [0, 5, 0] }
-                    : { scale: 1, rotate: 0 }
-                }
-                transition={{ duration: 0.5 }}
-              >
-                <ExternalLink className="h-12 w-12" />
-              </motion.div>
-            </div>
-          </motion.div>
+          <Image
+            src={project.image}
+            alt={project.title}
+            layout="fill"
+            objectFit="cover"
+          />
 
           {/* Hover overlay */}
           <AnimatePresence>
