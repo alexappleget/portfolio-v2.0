@@ -50,16 +50,6 @@ export const Hero = (): JSX.Element => {
               A Full-Stack Software Engineer who thrives on building clean,
               scalable, and user-focused web apps that bring real ideas to life.
             </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="text-cyan-200/80 text-lg sm:text-xl leading-relaxed"
-            >
-              I help startups and businesses turn their complex ideas into fast,
-              modern, and scalable digital solutions using the latest web
-              technologies.
-            </motion.p>
           </div>
 
           {/* Tech Stack */}
