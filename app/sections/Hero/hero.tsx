@@ -34,7 +34,7 @@ export const Hero = (): JSX.Element => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-3xl font-bold leading-tight tracking-tighter text-white md:text-5xl lg:text-6xl"
+              className="text-5xl font-bold leading-tight tracking-tighter text-white lg:text-6xl"
             >
               Hi, I&apos;m{" "}
               <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -45,7 +45,7 @@ export const Hero = (): JSX.Element => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-cyan-100 text-xl sm:text-2xl leading-relaxed mt-4"
+              className="text-cyan-100 md:text-2xl leading-relaxed mt-4"
             >
               A Full-Stack Software Engineer who thrives on building clean,
               scalable, and user-focused web apps that bring real ideas to life.

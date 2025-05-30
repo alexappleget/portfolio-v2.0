@@ -23,49 +23,43 @@ export const TechStack = () => {
   const technologies = [
     {
       name: "React",
-      icon: <SiReact size={24} />,
+      icon: <SiReact className="text-lg lg:text-2xl" />,
       description: "Modern UI Library",
       color: "#61DAFB",
     },
     {
       name: "Next.js",
-      icon: <SiNextdotjs size={24} />,
+      icon: <SiNextdotjs className="text-lg lg:text-2xl" />,
       description: "React Framework",
       color: "#ffffff",
     },
     {
       name: "TypeScript",
-      icon: <SiTypescript size={24} />,
+      icon: <SiTypescript className="text-lg lg:text-2xl" />,
       description: "Typed JavaScript",
       color: "#3178C6",
     },
     {
       name: "Tailwind CSS",
-      icon: <SiTailwindcss size={24} />,
+      icon: <SiTailwindcss className="text-lg lg:text-2xl" />,
       description: "Utility-First CSS",
       color: "#38B2AC",
     },
     {
       name: "Node.js",
-      icon: <SiNodedotjs size={24} />,
+      icon: <SiNodedotjs className="text-lg lg:text-2xl" />,
       description: "JavaScript Runtime",
       color: "#339933",
     },
     {
       name: "Supabase",
-      icon: <SiSupabase size={24} />,
+      icon: <SiSupabase className="text-lg lg:text-2xl" />,
       description: "Backend as a Service",
       color: "#3ECF8E",
     },
     {
-      name: "PostgreSQL",
-      icon: <SiPostgresql size={24} />,
-      description: "Relational Database",
-      color: "#336791",
-    },
-    {
       name: "OpenAI API",
-      icon: <SiOpenai size={24} />,
+      icon: <SiOpenai className="text-lg lg:text-2xl" />,
       description: "AI-Powered Language Models",
       color: "#ffffff",
     },
@@ -93,7 +87,7 @@ export const TechStack = () => {
                 }}
                 onHoverStart={() => setHoveredIndex(index)}
                 onHoverEnd={() => setHoveredIndex(null)}
-                className="relative flex h-14 w-14 items-center justify-center rounded-xl bg-slate-800/50 p-2 backdrop-blur-sm transition-all duration-300"
+                className="relative flex h-8 md:h-14 w-8 md:w-14 items-center justify-center rounded-xl bg-slate-800/50 p-2 backdrop-blur-sm transition-all duration-300"
                 style={{
                   boxShadow:
                     hoveredIndex === index
