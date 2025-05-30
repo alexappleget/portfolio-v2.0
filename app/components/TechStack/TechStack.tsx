@@ -5,7 +5,6 @@ import {
   SiTypescript,
   SiNodedotjs,
   SiTailwindcss,
-  SiPostgresql,
   SiSupabase,
   SiOpenai,
 } from "react-icons/si";
