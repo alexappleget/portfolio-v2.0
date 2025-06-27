@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2, Heart, Palette, Zap } from "lucide-react";
+import { Code2, Heart, Palette, Zap } from "lucide-react";
 import { JSX, useState } from "react";
 import { motion } from "framer-motion";
 
