@@ -136,7 +136,7 @@ export default async function BlogPostPage() {
             <Image
               src="/prd-overview.png"
               alt="Overview section of the PRD document"
-              width={1500}
+              width={750}
               height={400}
               className="rounded-lg border border-white/20 shadow-lg"
             />
