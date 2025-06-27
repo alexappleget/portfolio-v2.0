@@ -321,6 +321,7 @@ export default async function BlogPostPage() {
               autoPlay
               loop
               muted
+              playsInline
               className="w-full max-w-2xl rounded-lg border border-white/20 shadow-lg"
             />
             <h3 className="text-2xl font-semibold text-white mb-4 mt-8">
@@ -331,6 +332,7 @@ export default async function BlogPostPage() {
               autoPlay
               loop
               muted
+              playsInline
               className="w-full max-w-2xl rounded-lg border border-white/20 shadow-lg"
             />
           </div>
