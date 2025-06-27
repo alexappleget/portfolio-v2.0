@@ -73,7 +73,6 @@ export const Passions = (): JSX.Element => {
                 <h3 className="mb-2 text-xl font-semibold">{passion.title}</h3>
                 <p className="text-purple-200">{passion.description}</p>
               </div>
-              <ArrowUpRight className="h-5 w-5 text-purple-300 opacity-0 transition-opacity group-hover:opacity-100" />
             </div>
           </motion.div>
         ))}
