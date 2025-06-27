@@ -40,8 +40,8 @@ export const ArticleCard = ({
           <Image
             src={article.image}
             alt={article.title}
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
           />
         </div>
 

@@ -6,10 +6,10 @@ export const FunFacts = (): JSX.Element => {
     { emoji: "☕", text: "Powered by coffee" },
     { emoji: "🧠", text: "Building cool things with AI" },
     { emoji: "✈️", text: "Travel addict – always planning the next trip" },
-    { emoji: "🎮", text: "Gamer since childhood (prefer MMO - Healer)" },
+    { emoji: "🎮", text: "Gamer since childhood" },
     {
       emoji: "⚡",
-      text: "Hufflepuff at heart – still waiting for my Hogwarts letter",
+      text: "Hufflepuff at heart",
     },
   ];
 

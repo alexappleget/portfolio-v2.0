@@ -45,8 +45,8 @@ export const ProjectCard = ({
           <Image
             src={project.image}
             alt={project.title}
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
           />
 
           {/* Hover overlay */}

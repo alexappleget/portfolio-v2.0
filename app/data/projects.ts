@@ -18,7 +18,7 @@ export const projects: IProject[] = [
     id: 2,
     title: "Gridiron Survivor",
     description:
-      "Gridiron Survivor is an NFL pick’em web app that lets users join leagues, make weekly picks, and compete to stay alive. Built with Next.js, React, and Appwrite, it features custom lockout logic, real-time updates, and a clean, responsive UI.",
+      "Gridiron Survivor is an NFL pick’em web app that lets users join leagues, make weekly picks, and compete to stay alive. Built with Next.js, React, and Appwrite, it features custom lockout logic, real-time updates, user authentication, and a clean, responsive UI.",
     image: "/gridiron-survivor.png",
     liveUrl: "https://www.gridironsurvivor.com/",
     codeUrl: "https://github.com/LetsGetTechnical/gridiron-survivor",
