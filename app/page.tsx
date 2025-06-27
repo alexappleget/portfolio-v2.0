@@ -6,6 +6,7 @@ import { Footer } from "@/app/sections/Footer/footer";
 import { Hero } from "@/app/sections/Hero/hero";
 import { Services } from "@/app/sections/Services/services";
 import { ProjectsSection } from "./sections/ProjectsSection/ProjectsSection";
+import { Articles } from "./sections/Articles/articles";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Services />
       <ProjectsSection />
+      <Articles />
       <Contact />
       <Footer />
     </main>

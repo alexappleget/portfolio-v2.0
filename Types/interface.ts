@@ -1,5 +1,18 @@
 import { JSX } from "react";
 
+export interface IArticle {
+  id: number;
+  title: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+  category: string;
+  href: string;
+  image: string;
+  tags: string[];
+  color: string;
+}
+
 export interface IProject {
   id: number;
   title: string;
@@ -15,6 +28,15 @@ export interface IProject {
 
 export interface IProjectCard {
   project: IProject;
+  index: number;
+  selectedIndex: number | null;
+  hoveredIndex: number | null;
+  onHover: (index: number) => void;
+  onHoverEnd: () => void;
+}
+
+export interface IArticleCard {
+  article: IArticle;
   index: number;
   selectedIndex: number | null;
   hoveredIndex: number | null;
